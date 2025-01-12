@@ -55,7 +55,7 @@ async function run() {
     // Add Data client site & push database.
     app.post('/AllFoods', async (req, res) => {
       const Data = req.body;
-      // console.log('server data add', Data);
+
       const result = await AllFoods.insertOne(Data);
       res.send(result);
     });
@@ -64,8 +64,6 @@ async function run() {
       const filterID = req.params.id;
       const RealID = { _id: new ObjectId(filterID) };
       const Food = req.body;
-
-      // FoodName, Price, Quantity, FoodImage, FoodCategory, Description;
 
       const updateProduct = {
         $set: {
@@ -84,7 +82,7 @@ async function run() {
 
     app.post('/OrderFoods', async (req, res) => {
       const Data = req.body;
-      // console.log('server order data ', Data);
+
       const result = await OrderFoods.insertOne(Data);
       res.send(result);
     });
