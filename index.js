@@ -22,7 +22,7 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
+    // await client.connect();
 
     const AllFoods = client.db('Restaurant_Management').collection('All_Foods');
     const OrderFoods = client
