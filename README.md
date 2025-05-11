@@ -17,11 +17,15 @@ This is the **server-side** application for the Restaurant Management web app. I
 ## 📁 Folder Structure
 
 restaurant-management-server/
-├── config/ # MongoDB connection setup
-├── controllers/ # Business logic for routes
-├── routes/ # Route definitions for APIs
-├── .env # Environment variables (not committed)
-├── .gitignore
-├── index.js # Main server entry point
-├── package.json
-└── README.md # Project documentation
+├── .vercel/                         # Business logic for handling routes
+│   ├── project.json                 # AllFoods APIs logic
+│   └── Readme.txt                   # OrderFoods APIs logic
+├── node modules/                    # Route definitions for APIs
+│   ├── foodRoutes.js                # AllFoods routes
+│   └── orderRoutes.js               # OrderFoods routes
+├── .env                             # Environment variables (not committed to Git)
+├── .gitignore                       # To ignore unwanted files
+├── index.js                         # Main server entry point
+├── package.json                     # Project metadata & dependencies
+└── vercel.json                       
+
